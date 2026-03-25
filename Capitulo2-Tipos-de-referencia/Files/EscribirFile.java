@@ -1,0 +1,37 @@
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class EscribirFile {
+    public static void main(String[] args) {
+
+        for (String fileName : args)
+            doubleSpace(fileName);
+    }
+
+    public static void doubleSpace(String fileName) {
+        PrintWriter fileOut = null;
+        Scanner fileIn = null;
+
+        try {
+            fileIn = new Scanner(new FileReader(fileName));
+            fileOut = new PrintWriter(new FileWriter(fileName + ".txt"));
+
+            while (fileIn.hasNextLine()) {
+                String oneline = fileIn.nextLine();
+                fileOut.println(oneline + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fileOut != null)
+                fileOut.close();
+            if (fileIn != null) {
+                fileIn.close();
+            }
+        }
+
+    }
+}
