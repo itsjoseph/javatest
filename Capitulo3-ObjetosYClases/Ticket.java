@@ -3,25 +3,25 @@ public class Ticket {
     private int serialNumber;
     private static int countTicket;
 
-    public Ticket(){
+
+    public Ticket() {
         System.out.println("Calling constructor");
         serialNumber = ++countTicket;
     }
 
-    public int getSerialNumber(){
+    public int getSerialNumber() {
         return this.serialNumber;
     }
 
-    public String getString(){
+    public String getString() {
         return "Ticket#: " + this.getSerialNumber();
     }
 
-    public static int GetTicketCount(){
+    public static int GetTicketCount() {
         return countTicket;
     }
 
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Ticket t1;
         Ticket t2;
 
