@@ -1,6 +1,4 @@
-import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.BitSet;
 
 public class BigRational {
     private BigInteger num;
@@ -33,7 +31,7 @@ public class BigRational {
         int slashIndex = str.indexOf('/');
         if(slashIndex == -1){
             num = new BigInteger(str.trim());
-            den = new BigInteger.ONE;
+            den = BigInteger.ONE;
         } else {
             num = new BigInteger(str.substring(0,slashIndex).trim());
             den = new BigInteger(str.substring(slashIndex + 1).trim());
@@ -94,7 +92,25 @@ public class BigRational {
     }
 
     public boolean equals(Object obj) {
-        
+        if(!(obj instanceof BigRational)) 
+            return false;
+
+        BigRational rhs = (BigRational) obj;
+        return num.equals(rhs.num) && den.equals(rhs.den);
     }
     
+    public String toString(){
+        if(!(den.equals(BigInteger.ZERO))){
+            if (num.compareTo(BigInteger.ZERO) < 0) {
+                return "-Infinity";              
+            } else {
+                return "Infinity";
+            }
+        } 
+        if (den.equals(BigInteger.ONE)) {
+            return num.toString();            
+        } else {
+            return num + " / " + den;
+        }
+    }
 }
