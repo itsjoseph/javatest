@@ -12,6 +12,11 @@ public class Main {
     }
 
     public static void printAll(Person[] arr) {
-        System.out.println(arr.length);
+        for(int i = 0; i < arr.length; i ++){
+            if(arr[i] != null){
+                System.out.println("[" + i + "]");
+                System.out.println(arr[i].toString());
+            }
+        }
     }
 }
