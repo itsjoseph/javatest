@@ -1,3 +1,4 @@
+package src;
 import 
 public class Student extends Person {
 
