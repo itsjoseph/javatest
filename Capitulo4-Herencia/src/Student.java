@@ -1,5 +1,4 @@
 package src;
-import 
 public class Student extends Person {
 
     private double gpa;

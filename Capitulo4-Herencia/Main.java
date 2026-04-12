@@ -1,4 +1,17 @@
 import src.*;
+
 public class Main {
-   Person p = new Person(null, 0, null, null);
+    public static void main(String[] args) {
+        Person[] p = new Person[4];
+
+        p[0] = new Person("Joe", 20, "Street 1", "77551");
+        p[1] = new Person("Jill", 21, "Street 2", "78649");
+        p[2] = new Person("Biden", 22, "Street 3", "684984");
+
+        printAll(p);
+    }
+
+    public static void printAll(Person[] arr) {
+        System.out.println(arr.length);
+    }
 }
