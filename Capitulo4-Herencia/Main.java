@@ -8,7 +8,6 @@ public class Main {
         p[1] = new Person("Jill", 21, "Street 2", "78649");
         p[2] = new Person("Biden", 22, "Street 3", "684984");
 
-        System.out.println(p[2].getName());    
         printAll(p);
     }
 
