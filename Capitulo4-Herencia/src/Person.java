@@ -5,13 +5,13 @@ public class Person {
     private String address;
     private String phone;
 
-    public Person(String n, int ag, String add, String p){
-        n = this.name;
-        ag = this.age;
-        add = this.address;
-        p = this.phone;
+    public Person(String name, int age, String address, String phone){
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.phone = phone;
     }
-
+    
     public String getName() {
         return name;
     }

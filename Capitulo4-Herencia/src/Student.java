@@ -5,7 +5,7 @@ public class Student extends Person {
 
     public Student(String n, int ag, String add, String p, double gpa){
         super(n,ag,add,p);
-        gpa = this.gpa;
+        this.gpa = gpa;
     }
 
     public double getGpa() {
