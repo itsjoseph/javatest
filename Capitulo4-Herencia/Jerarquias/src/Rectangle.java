@@ -1,12 +1,24 @@
 package Jerarquias.src;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Stretchable {
     private double width;
     private double length;
 
     public Rectangle(double width, double length) {
         this.width = width;
         this.length = length;
+    }
+
+    @Override
+    public void stretch(double factor) {
+        if (factor <= 0)
+            throw new IllegalArgumentException("Factor must be positive");
+
+        if (length > width) {
+            length *= factor;
+        } else {
+            width *= factor;
+        }
     }
 
     public double getLength() {
@@ -34,5 +46,5 @@ public class Rectangle extends Shape {
                 ", length=" + length +
                 '}';
     }
-    
+
 }

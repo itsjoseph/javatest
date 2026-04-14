@@ -27,5 +27,7 @@ public class Main {
             System.out.println(shape);
         }
     }
+
+    public static void stretchAll(WhatType[] arr, factor)
     
 }
