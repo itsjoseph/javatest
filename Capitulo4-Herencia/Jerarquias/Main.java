@@ -28,6 +28,4 @@ public class Main {
         }
     }
 
-    public static void stretchAll(WhatType[] arr, factor)
-    
 }
